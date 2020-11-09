@@ -38,6 +38,23 @@ namespace BinarySearchTree
             }
             return treeSize;
         }
+        /// <summary>
+        /// Searches the specific data in the tree 
+        /// </summary>
+        /// <param name="data">The data.</param>
+        /// <returns></returns>
+        public int Search(int data)
+        {
+            if (root == null)
+            {
+                Console.WriteLine("Binary Search Tree is Empty");
+                return 0;
+            }
+            else
+            {
+                return root.Search(data);
+            }
+        }
         //Displays the items of tree
         public void Display()
         {

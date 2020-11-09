@@ -51,6 +51,35 @@ namespace BinarySearchTree
                 }
             }
         }
+        /// <summary>
+        /// Searches the specified data if found returns number searched back or else
+        /// return 0
+        /// </summary>
+        /// <param name="data">The data.</param>
+        /// <returns></returns>
+        public int Search(int data)
+        {
+            TreeNode currentNode = this;
+            while (currentNode != null)
+            {
+                if (currentNode.data == data)
+                {
+                    return currentNode.data;
+                }
+                else
+                {
+                    if (data > currentNode.data)
+                    {
+                        currentNode = currentNode.rightNode;
+                    }
+                    else
+                    {
+                        currentNode = currentNode.leftNode;
+                    }
+                }
+            }
+            return 0;
+        }
         //Displaying data as leftNode then  rootNode then  rightNode
         public void InOrderTraversal()
         {
